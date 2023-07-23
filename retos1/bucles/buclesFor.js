@@ -1,4 +1,7 @@
+"use strict";
 // reto de numeros impares
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.add = void 0;
 function evenNumbers(num) {
     for (var i = 0; i <= num; i++) {
         if (i % 2 !== 0) {
@@ -7,7 +10,7 @@ function evenNumbers(num) {
     }
     return "";
 }
-console.log(evenNumbers(13));
+// console.log(evenNumbers(13));
 // array al reves
 function myRevert(myArray) {
     var reversedArr = [];
@@ -16,9 +19,9 @@ function myRevert(myArray) {
     }
     return reversedArr;
 }
-var arrNum = [1, 2, 3, 4, 5];
-var arrAlreves = myRevert(arrNum);
-console.log(arrAlreves);
+// let arrNum = [1, 2, 3, 4, 5];
+// let arrAlreves = myRevert(arrNum);
+// console.log(arrAlreves);
 // reto de arcoiris
 function isRainbow(colors) {
     var arcoiris = ["rojo", "naranja", "amarillo", "verde", "cian", "azul", "violeta"];
@@ -31,9 +34,10 @@ function isRainbow(colors) {
             console.log("".concat(colors[i], " no est\u00E1 en el arco\u00EDris."));
         }
     }
+    return "";
 }
-var colores = ["rojo", "verde", "rosa", "azul", "amarillo", "marron", "beige"];
-isRainbow(colores);
+// let colores = ["rojo", "verde", "rosa", "azul", "amarillo", "marron", "beige"];
+// isRainbow(colores);
 // reto sumar palabras
 function add(myWords) {
     var sumaCaracteres = 0;
@@ -42,6 +46,7 @@ function add(myWords) {
     }
     return sumaCaracteres;
 }
-var palabras = ["pepe", "aun", "esta", "desaparecido"];
-var resultado = add(palabras);
-console.log(resultado);
+exports.add = add;
+// let palabras = ["pepe", "aun", "esta", "desaparecido"];
+// let resultado = add(palabras);
+// console.log(resultado);

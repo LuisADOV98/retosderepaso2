@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var buclesFor_1 = require("./buclesFor");
+var condicionales_1 = require("./condicionales");
+var array1 = ["casa", "coche", "ciudad", "cesta"];
+var array2 = ["barco", "baca", "bicicleta", "balon", "bisiesto", "brasil"];
+var array3 = ["venezuela", "veneno", "voltaje"];
+var resultado1 = (0, buclesFor_1.add)(array1);
+var resultado2 = (0, buclesFor_1.add)(array2);
+var resultado3 = (0, buclesFor_1.add)(array3);
+console.log(resultado1);
+console.log((0, condicionales_1.isEven)(resultado1));
+console.log(resultado2);
+console.log((0, condicionales_1.isEven)(resultado2));
+console.log(resultado3);
+console.log((0, condicionales_1.isEven)(resultado3));
