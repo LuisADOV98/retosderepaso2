@@ -21,14 +21,14 @@ import { Mobile } from "./mobile";
 
 // console.log(mobile1.printMobile());
 
-let mobile2: Mobile = new Mobile("nokia", "mediamarkt", "slide", "verde", 500)
-let mobile3: Mobile = new Mobile("sony", "fnac", "Smart", "azul", 800)
-let mobile4: Mobile = new Mobile("samsung", "samsungStore", "ss22", "morado", 1100)
+// let mobile2: Mobile = new Mobile("nokia", "mediamarkt", "slide", "verde", 500)
+// let mobile3: Mobile = new Mobile("sony", "fnac", "Smart", "azul", 800)
+// let mobile4: Mobile = new Mobile("samsung", "samsungStore", "ss22", "morado", 1100)
  
-let myMobiles:Mobile[] = [mobile2,mobile3, mobile4]
+// let myMobiles:Mobile[] = [mobile2,mobile3, mobile4]
 
-console.log(myMobiles[1].printMobile());
-console.log(myMobiles[2].printMobile());
-console.log(myMobiles[0].printMobile());
+// console.log(myMobiles[1].printMobile());
+// console.log(myMobiles[2].printMobile());
+// console.log(myMobiles[0].printMobile());
 
 
