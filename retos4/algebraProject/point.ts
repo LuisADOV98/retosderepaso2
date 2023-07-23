@@ -27,7 +27,36 @@ export class Point{
     public distanceToOrigin():number{
         return Math.round(Math.sqrt(this.x * this.x + this.y * this.y))
     }
-    public calcularDistancia(z:number,w:number){
-        return Math.round(Math.sqrt(z * z + w * w)) - Math.round(Math.sqrt(this.x * this.x + this.y * this.y))
+    public calcularDistancia(anotherPoint: Point):number{
+        let w = this.x - anotherPoint.getX();
+        let z = this.y - anotherPoint.getY();
+        return Math.sqrt(w * w + z * z);
     }
+    calculateQuadrant():number{
+            if (this.x === 0 || this.y === 0) {
+              return 0;
+            } else if (this.x > 0 && this.y > 0) {
+              return 1;
+            } else if (this.x < 0 && this.y > 0) {
+              return 2;
+            } else if (this.x < 0 && this.y < 0) {
+              return 3;
+            } else {
+              return 4;
+            }
+          }
+          public calculateNearest(points: Point[]): Point {
+            let nearestPoint = points[0];
+            let minDistance = this.calcularDistancia(points[0]);
+        
+            for (let i = 1; i < points.length; i++) {
+              const currentDistance = this.calcularDistancia(points[i]);
+              if (currentDistance < minDistance) {
+                minDistance = currentDistance;
+                nearestPoint = points[i];
+              }
+            }
+        
+            return nearestPoint;
+          }
 }
