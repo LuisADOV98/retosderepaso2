@@ -89,7 +89,7 @@ export class Point{
           let minDistance = this.calcularDistancia(points[0]);
       
           for (let i = 1; i < points.length; i++) {
-            const currentDistance = this.calcularDistancia(points[i]);
+            let currentDistance = this.calcularDistancia(points[i]);
             if (currentDistance < minDistance) {
               minDistance = currentDistance;
               nearestPoint = points[i];
