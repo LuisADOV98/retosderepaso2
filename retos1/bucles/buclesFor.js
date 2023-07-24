@@ -34,10 +34,9 @@ function isRainbow(colors) {
             console.log("".concat(colors[i], " no est\u00E1 en el arco\u00EDris."));
         }
     }
-    return "";
 }
-// let colores = ["rojo", "verde", "rosa", "azul", "amarillo", "marron", "beige"];
-// isRainbow(colores);
+var colores = ["rojo", "verde", "rosa", "azul", "amarillo", "marron", "beige"];
+isRainbow(colores);
 // reto sumar palabras
 function add(myWords) {
     var sumaCaracteres = 0;
