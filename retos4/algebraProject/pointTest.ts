@@ -5,7 +5,7 @@ let point1: Point = new Point(-155,-250)
 
 console.log(point1.toString());
 console.log(point1.distanceToOrigin());
-console.log(point1.calcularDistancia(101,111));
+console.log(point1.calcularDistancia(point1));
 
 console.log(point1.calculateQuadrant());
 
