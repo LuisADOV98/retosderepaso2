@@ -18,7 +18,7 @@ export class MobileCollection{
     public getTotalPrice():number{
         return this.totalPrice
     }
-    public setTotalPrice(newTotalPrice){
+    public setTotalPrice(newTotalPrice):void{
         this.totalPrice = newTotalPrice
     }
     public printCollection():string{
@@ -29,7 +29,7 @@ export class MobileCollection{
             return todos
         }
 
-    public totalPriceCalculation(){
+    public totalPriceCalculation():number{
         let total:number = 0
         for (let i = 0; i < this.mobiles.length; i++) {
         total += this.mobiles[i].getPrice();

@@ -45,7 +45,7 @@ export class Mobile {
     setPrice(newPrice):void{
         this.price = newPrice
     }
-    printMobile(){
+    printMobile():string{
         return `
         The characteristics of the mobile name are:
         Name: ${this.name},
