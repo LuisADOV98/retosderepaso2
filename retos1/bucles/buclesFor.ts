@@ -33,7 +33,7 @@ function myRevert(myArray: number []):number[] {
 
 // reto de arcoiris
 
-function isRainbow(colors: string[]):string {
+function isRainbow(colors: string[]):void{
     let arcoiris = ["rojo", "naranja", "amarillo", "verde", "cian", "azul", "violeta"];
 
     for (let i = 0; i < colors.length; i++) {
@@ -44,10 +44,9 @@ function isRainbow(colors: string[]):string {
             console.log(`${colors[i]} no está en el arcoíris.`);
         }
     } 
-        return""
 }
-// let colores = ["rojo", "verde", "rosa", "azul", "amarillo", "marron", "beige"];
-// isRainbow(colores);
+let colores = ["rojo", "verde", "rosa", "azul", "amarillo", "marron", "beige"];
+isRainbow(colores);
 
 
 // reto sumar palabras

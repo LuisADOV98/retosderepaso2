@@ -1,29 +1,28 @@
 // retos numero par en array[]
 function hasEven(myNums) {
     var i = 0;
-    while (i < myNums.length) {
-        if (myNums[i] % 2 === 0) {
-            return true;
-        }
+    var bool1 = false;
+    while (i < myNums.length && !bool1) {
+        bool1 = myNums[i] % 2 == 0;
         i++;
     }
-    return false;
+    return bool1;
 }
-var arrNum2 = [1, 3, 5, 8, 9];
-var resultadoWhile = hasEven(arrNum2);
-console.log(resultadoWhile);
+var arrNum2 = [1, 3, 5, 7, 9];
+console.log(hasEven(arrNum2));
 // reto while M
 function startWithM(myNames) {
     var i = 0;
-    while (i < myNames.length) {
+    var bool = true;
+    while (i < myNames.length && bool == true) {
         if (myNames[i][0] !== 'M') {
-            return false;
+            bool = false;
         }
         i++;
     }
-    return true;
+    return bool;
 }
-var arrNombres1 = ["Maria", "Marco", "Mario", "Marcelo", "Marta"];
-var arrNombres2 = ["Marina", "Martina", "Samuel", "Cedro", "Carlos"];
-console.log(startWithM(arrNombres1));
-console.log(startWithM(arrNombres2));
+// let arrNombres1:string[] = ["Maria", "Marco", "Mario", "Marcelo", "Marta"]
+// let arrNombres2:string[] = ["Marina", "Martina", "Samuel", "Cedro", "Carlos"]
+// console.log(startWithM(arrNombres1));
+// console.log(startWithM(arrNombres2));

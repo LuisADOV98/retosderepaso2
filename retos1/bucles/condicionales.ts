@@ -3,58 +3,58 @@
 
 // reto zodiac
 
-function zodiac(day:number,month:number):string{
-    let zodiacArr: string[] = ["acuario ", "piscis ", "aries ","tauro ", "geminis ","cancer ","leo ","virgo ", "libra ", "escorpio ", "sagitario ", "capricornio" ]
+function zodiac(day:number,month:number):string[]{
+    let zodiacArr: string[] = []
     if( (day > 21 && month == 1)|| (day < 19 && month == 2)){
-     console.log("Tu signo es: " + zodiacArr[0]);
+    zodiacArr.push("acuario")
     }else if((day > 20 && month == 2)|| (day < 20 && month == 3)){
-     console.log("Tu signo es: " + zodiac[1]);
+    zodiacArr.push("piscis")
     }else if((day > 21 && month == 3) || (day < 19 && month == 4)){
-     console.log("Tus signo es: "+ zodiac[2]);
+     zodiacArr.push("aries")
     }else if((day > 20 && month == 4) || (day < 20 && month == 5)){
-     console.log("Tu signo es: "+ zodiac[3]);
+     zodiacArr.push("tauro")
     }else if((day > 21 && month == 5) || (day < 20 && month == 6)) {
-     console.log("Tu signo es: "+ zodiac[4]);
+     zodiacArr.push("geminis")
     }else if((day > 21 && month == 6) || (day < 22 && month == 7)) {
-     console.log("Tu signo es: "+ zodiac[5]);
+     zodiacArr.push("cancer")
     }else if((day > 23 && month == 7) || (day < 22 && month == 8)) {
-     console.log("Tu signo es: "+ zodiac[6]);
+     zodiacArr.push("leo")
     }else if((day > 23 && month == 8) || (day < 20 && month == 9)) {
-     console.log("Tu signo es: "+ zodiac[7]);
+     zodiacArr.push("virgo")
     }else if((day > 23 && month == 9) || (day < 22 && month == 10)) {
-     console.log("Tu signo es: "+ zodiac[8]);
+     zodiacArr.push("libra")
     }else if((day > 23 && month == 10) || (day < 21 && month == 11)) {
-     console.log("Tu signo es: "+ zodiac[9]);
+     zodiacArr.push("escorpio")
     }else if((day > 22 && month == 11) || (day < 21 && month == 12)) {
-     console.log("Tu signo es: "+ zodiac[10]);
+     zodiacArr.push("sagitario")
     }else if((day > 22 && month == 12) || (day < 20 && month == 1)) {
-     console.log("Tu signo es: "+ zodiac[11]);
+     zodiacArr.push("capricornio")
     }else{
      console.log("ingrese un numero para el dia y texto para el mes: Ejemplo.5,3");
     }
-    return ""
+    return zodiacArr
  }
-//  console.log(zodiac(23,1));
+ console.log(zodiac(10,10));
 
 
 //  reto continentes
 
-function continent(country:string):string{
-    let continentes: string[] = ["Europa ", "America ", "Oceania", "Asia ", "Africa"]
+function continent(country:string):string[]{
+    let continentes: string[] = []
     if (country == "rusia" || country == "portugal" || country == "francia" || country == "italia" ) {
-    console.log("tu continente es:" + continentes[0]);
+    continentes.push("europa")
  } else if (country == "venezuela" || country == "argentina" || country == "colombia" || country == "peru"){
-    console.log("tu continente es: " + continentes[1]);
+    continentes.push("america")
  } else if (country == "nueva zelanda" || country == "australia" || country == "fiyi" || country == "samoa"){
-    console.log("tu continente es: "+ continentes[2]);
+    continentes.push("oceania")
  } else if (country == "china" || country == "japon" || country == "korea" || country == "india"){
-    console.log("tu continente es: " + continentes[3]);
+    continentes.push("asia")
  } else if (country == "nigeria" || country == "marruecos" || country == "kenia" || country == "ghana"){
-    console.log("tu continente es: " + continentes[4]);
+    continentes.push("africa")
  }
- return ""
+ return continentes
 }
-// console.log(continent("china"));
+console.log(continent("china"));
 
 
 // retos pares e impares
