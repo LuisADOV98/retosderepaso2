@@ -22,28 +22,30 @@ export class Point{
         this.y = newY
     }
     public toString(){
-        return `${this.x}, ${this.y}`
+        return `${this.getX}, ${this.getY}`
     }
     public distanceToOrigin():number{
-        return Math.round(Math.sqrt(this.x * this.x + this.y * this.y))
+        return Math.round(Math.sqrt(this.getX() * this.getX() + this.getY() * this.getY()))
     }
     public calcularDistancia(anotherPoint: Point):number{
-        let w = this.x - anotherPoint.getX();
-        let z = this.y - anotherPoint.getY();
+        let w = this.getX() - anotherPoint.getX();
+        let z = this.getY() - anotherPoint.getY();
         return Math.sqrt(w * w + z * z);
     }
     calculateQuadrant():number{
+            let resultado;
             if (this.x === 0 || this.y === 0) {
-              return 0;
-            } else if (this.x > 0 && this.y > 0) {
-              return 1;
-            } else if (this.x < 0 && this.y > 0) {
-              return 2;
-            } else if (this.x < 0 && this.y < 0) {
-              return 3;
+              resultado = 0;
+            } else if (this.getX() > 0 && this.getY() > 0) {
+              resultado = 1;
+            } else if (this.getX() < 0 && this.getY() > 0) {
+              resultado = 2;
+            } else if (this.getX() < 0 && this.getY() < 0) {
+              resultado = 3;
             } else {
-              return 4;
+              resultado = 4;
             }
+            return resultado
           }
           public calculateNearest(points: Point[]): Point {
             let nearestPoint = points[0];
