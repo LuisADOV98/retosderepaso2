@@ -2,9 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MobileCollection = void 0;
 var MobileCollection = /** @class */ (function () {
-    function MobileCollection(mobiles, totalPriceCalculation) {
+    function MobileCollection(mobiles) {
         this.mobiles = mobiles;
-        this.totalPrice;
+        this.totalPrice = this.totalPriceCalculation();
     }
     MobileCollection.prototype.getMobiles = function () {
         return this.mobiles;
@@ -19,7 +19,18 @@ var MobileCollection = /** @class */ (function () {
         this.totalPrice = newTotalPrice;
     };
     MobileCollection.prototype.printCollection = function () {
-        return this.mobiles;
+        var todos;
+        for (var i = 0; i < this.mobiles.length; i++) {
+            todos += this.mobiles[i].printMobile();
+        }
+        return todos;
+    };
+    MobileCollection.prototype.totalPriceCalculation = function () {
+        var total = 0;
+        for (var i = 0; i < this.mobiles.length; i++) {
+            total += this.mobiles[i].getPrice();
+        }
+        return total;
     };
     return MobileCollection;
 }());

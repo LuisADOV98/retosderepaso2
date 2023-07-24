@@ -8,8 +8,13 @@ let mobile3: Mobile = new Mobile("samsung", "samsungStore", "ss22", "morado", 11
 let mobile4: Mobile= new Mobile("huawei", "mediamarkt", "p50", "negro", 900)
  
 let myMobiles1:Mobile[] =[mobile1,mobile2,mobile3,mobile4]
-let myCollection:MobileCollection = new MobileCollection(myMobiles1, 0)
+let myCollection:MobileCollection = new MobileCollection(myMobiles1)
+myCollection.setMobiles(myMobiles1)
+
 
 console.log(myCollection.printCollection());
+// console.log(myCollection.getMobiles());
+// console.log(myCollection.getTotalPrice());
+// console.log(myCollection.totalPriceCalculation());
 
 
